@@ -11,6 +11,13 @@ class SinglyLinkedList {
     constructor(head = null) {
         this.head = head;
     }
+    addToHead(val) {
+        const newNode = new SinglyLinkedNode(val);
+        newNode.next = this.head;
+        this.head = newNode;
+        return this.head;
+
+    }
 
     addToTail(val) {
         let newNode = new SinglyLinkedNode(val);
@@ -77,18 +84,25 @@ class SinglyLinkedList {
 
     findMid() {
         const length = this.listLength();
-        let midPoint = ((length / 2)-1);
+        let midPoint = ((length / 2) - 1);
         if ((length % 2) !== 0) {
             midPoint = Math.ceil(midPoint);
             // console.log(length, midPoint)
         }
-        
+
         let nth = this.findNthNode(midPoint);
         return nth;
     }
 
 
     reverse() {
+        const reversedList = new SinglyLinkedList();
+        let curr = this.head;
+        while (curr) {
+            reversedList.addToHead(curr.value)
+            curr = curr.next;
+        }
+        return reversedList;
         // Returns a new reversed version of the linked list
         // Try implementing it by returning a new linked list then returning
         // the original linked list reversed in place
@@ -100,6 +114,15 @@ class SinglyLinkedList {
     }
 
     reverseInPlace() {
+        const length = this.listLength() - 1;
+        if (!this.head) return;
+        let curr = this.head;
+        while (curr) {
+            this.addToHead(curr.value)
+            curr = curr.next;
+        }
+        const nth = this.findNthNode(length);
+        nth.next = null;
         // Reverses the linked list in-place
 
         // Your code here
