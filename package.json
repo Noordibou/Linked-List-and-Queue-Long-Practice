@@ -4,22 +4,22 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "mocha"
+        "test": "mocha"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/appacademy-starters/algorithms-big-o-starter.git"
+        "type": "git",
+        "url": "git+https://github.com/appacademy-starters/algorithms-big-o-starter.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/appacademy-starters/algorithms-big-o-starter/issues"
+        "url": "https://github.com/appacademy-starters/algorithms-big-o-starter/issues"
     },
     "homepage": "https://github.com/appacademy-starters/algorithms-big-o-starter#readme",
     "dependencies": {
-      "chai": "^4.3.4",
-      "chai-spies": "^1.0.0",
-      "mocha": "^8.3.0"
+        "chai": "^4.3.4",
+        "chai-spies": "^1.0.0",
+        "mocha": "^10.2.0"
     }
 }
